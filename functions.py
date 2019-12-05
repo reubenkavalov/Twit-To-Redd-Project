@@ -8,7 +8,6 @@ from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from collections import Counter
 import streamlit as st
 
-
 stopwords = set(nltk.corpus.stopwords.words('english'))
 
 reddit_df = pd.read_csv('/Users/reuben/PycharmProjects/TwittToRedd/venv/reddit_df.csv')
@@ -316,3 +315,17 @@ def RedditCategoryPredictor(twitter_handle):
                     '* [r/CrazyIdeas](https://www.reddit.com/r/startrek/)<br>', unsafe_allow_html=True
                     )
     return max(cnt)
+
+
+indexed_subs_df = pd.read_csv('related_subs_and_indexes')
+model_relatedsubs = Doc2Vec.load('d2v_relatedsubs.model')
+
+
+def get_most_similar_subreddits(sub_name):
+    sub_num = indexed_subs_df[indexed_subs_df['sub'] == sub_name]['index_no'].values[0]
+    similar_subs = pd.DataFrame(model_relatedsubs.docvecs.most_similar(sub_num, topn=5))
+    similar_subs.columns = ['index_no', 'Percent Similarity']
+    similar_subs['index_no'] = similar_subs['index_no'].apply(lambda x: int(x))
+    similar_subs['Percent Similarity'] = similar_subs['Percent Similarity'].apply(lambda x: str(round(x * 100)) + '%')
+    similar_df = indexed_subs_df.merge(similar_subs, how='inner', on='index_no')
+    return similar_df.sort_values(by='Percent Similarity', ascending=False)[['sub', 'Percent Similarity']]
