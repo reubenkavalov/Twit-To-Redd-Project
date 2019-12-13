@@ -6,5 +6,7 @@ To bridge the gap between Twitter users and Reddit users, as many people who enj
 
 # The Data
 
-In order to train a model to classify tweets into a certain "category" of subreddits, it needs to be trained on those different categories. The following categories were selected based on [this Reddit post](https://www.reddit.com/r/TheoryOfReddit/comments/1f7hqc/the_200_most_active_subreddits_categorized_by/): * Discussion and Stories * Discussion and Stories
+In order to train a model to classify tweets into a certain "category" of subreddits, it needs to be trained on those different categories. The following categories were selected based on [this Reddit post](https://www.reddit.com/r/TheoryOfReddit/comments/1f7hqc/the_200_most_active_subreddits_categorized_by/):
+* Discussion and Stories 
+* Discussion and Stories
 
