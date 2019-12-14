@@ -27,7 +27,7 @@ Each category had 5-25 subreddits in it; The titles of the top 1000 posts from e
 
 ![DataFrame of Posts](images/postsdf.png)
 
-# The Model
+# The First Model
 
 A Doc2Vec Model proved to be effective for this scenario because of its ability to analyze meanings of not only words, but groups of words/sentences/corpora at once. The classification model trains on the data from the DataFrame above, with the intent of taking just a few words or sentences(like a reddit post title, or a tweet), and predict the proper category for it.
 
@@ -42,7 +42,9 @@ A frontend was established using Streamlit, providing an easy-to-use user interf
 
 ![The App](images/streamlitapp.png)
 
-Here is an example
+Here is an example of the app suggesting an appropriate category of subreddits for a popular Twitter technology account, @TechCrunch:
+
+![TechCrunch's Suggestions](images/techcrunch.png)
 
 
 
