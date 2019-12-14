@@ -50,21 +50,6 @@ Going to the second tab on the application, the user will notice a text input/dr
 
 ![Related Subreddits](images/relatedsubs.png)
 
-For an added peek at what terms are actually being discussed on the subreddit, the application also quickly pulls up a word cloud for the particular subreddit that was selected:
+***For an added peek at what terms are actually being discussed on the subreddit, the application also quickly pulls up a word cloud for the particular subreddit that was selected:***
 
 ![Wordcloud](images/wordcloud.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
