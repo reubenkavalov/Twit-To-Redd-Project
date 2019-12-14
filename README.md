@@ -1,5 +1,5 @@
 # Twit-To-Redd-Project
-Recommends subreddits from Reddit based on specified Twitter user "likes"
+Using Natural Language Processing to suggest subreddits from Reddit based on specified Twitter user "likes".
 
 
 # Goal of the Project
@@ -41,6 +41,8 @@ User "liked" tweets are grabbed upon entering the user's Twitter handle, which i
 A frontend was established using Streamlit, providing an easy-to-use user interface for the project.
 
 ![The App](images/streamlitapp.png)
+
+Here is an example
 
 
 
