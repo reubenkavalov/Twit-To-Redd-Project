@@ -38,13 +38,28 @@ User "liked" tweets are grabbed upon entering the user's Twitter handle, which i
 
 # The App
 
-A frontend was established using Streamlit, providing an easy-to-use user interface for the project.
-
-![The App](images/streamlitapp.png)
-
-Here is an example of the app suggesting an appropriate category of subreddits for a popular Twitter technology account, @TechCrunch:
+A frontend was established using Streamlit, providing an easy-to-use user interface for the project. Here is an example of the app suggesting an appropriate category of subreddits for a popular Twitter technology account, @TechCrunch:
 
 ![TechCrunch's Suggestions](images/techcrunch.png)
+
+# The Second Model
+
+Next, with the goal of really customizing a tailored list of subreddits for the user, I set out to acquire more data on subreddits **related** to the list of ~170 subreddits I have now. After compiling a list of ~580 subreddits and the top 1000 post titles from them, I wanted to include a second phase to the app that allows a user to select a subreddit, perhaps from the list they were already recommended in the first phase, and to suggest *more* subreddits using another, separate Doc2Vec model. This time, this model was trained on the text of all of the related subreddits, calculating a similarity score between each one.
+
+Going to the second tab on the application, the user will notice a text input/dropdown box that allows them to type in/select one of the subreddits, and immediately calculates and returns the five most similar subreddits in terms of what is being discussed on them. Here is an example looking for subreddits similar to "science":
+
+![Related Subreddits](images/relatedsubs.png)
+
+For an added peek at what terms are actually being discussed on the subreddit, the application also quickly pulls up a word cloud for the particular subreddit that was selected:
+
+![Wordcloud](images/wordcloud.png)
+
+
+
+
+
+
+
 
 
 
