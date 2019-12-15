@@ -53,3 +53,7 @@ Going to the second tab on the application, the user will notice a text input/dr
 ***For an added peek at what terms are actually being discussed on the subreddit, the application also quickly pulls up a word cloud for the particular subreddit that was selected:***
 
 ![Wordcloud](images/wordcloud.png)
+
+# Thank you
+
+I very much appreciate you checking out this repo. Feel free to reach out to me with any questions, comments, thoughts, or additions you might have made!
